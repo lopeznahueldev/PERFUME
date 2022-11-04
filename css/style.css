@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e2e8e0;
+  text-decoration: none;
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Playfair Display', serif;
+  list-style-type: none; 
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header  header  header"
+    "main    main    aside"
+    "footer  footer  footer";
+  min-height: 100vh; 
+}
+
+.container, .footer__content {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+a {
+  text-decoration: none;
+  color: #e2e8e0; 
+}
+
+/* HEADER */
+.header {
+  background-color: #090909;
+  grid-area: header;
+  padding: 30px 20px; }
+  
+.header a {
+  color: #e2e8e0; 
+}
+
+.header a:hover {
+  color: #4B4B4B;
+  transition: 0.3s; 
+}
+
+/* MAIN */
+.main {
+  background-color: #0f1010;
+  grid-area: main; 
+}
+
+.main-section {
+  margin-top: 40px;
+  margin-bottom: 40px; 
+}
+      
+.main-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px; 
+}
+
+/* TARJETAS=PRODUCTOS */
+.card {
+  background-color: #090909;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -10px #4B4B4B;
+  transition: transform 0.5s; 
+}
+
+.card__header {
+  position: relative; 
+}
+
+.card__header img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+.card:hover {
+  transform: translateY(-3px); 
+}
+
+.card a:hover {
+  color: #4B4B4B;
+  transition: 0.3s; 
+}
+
+.boton_comprar {
+  width: 100%;
+  background-color: #4B4B4B;
+}
+
+/* ASIDE=CARRITO */
+.aside {
+  background-color: #0f1010;
+  grid-area: aside; 
+}
+
+.cartContainer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.quantCart{
+  font-size: 15px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  color: #090909;
+  background-color: #e2e8e0;
+  text-align: center;
+  top: 0;
+  left: 190%;
+  border-radius: 50%;
+}
+
+.boton_eliminar, .boton_comprarTodo {
+  width: 33%;
+  background-color: #4B4B4B;
+}
+
+.titulo_total, .precio_total, .boton_comprarTodo {
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  color: #e2e8e0;
+  background-color: #090909;
+  grid-area: footer; 
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px; 
+}
+
+.footer__content a:hover {
+      color: #4B4B4B;
+      transition: 0.3s; 
+}
